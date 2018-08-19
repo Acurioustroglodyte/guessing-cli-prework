@@ -17,7 +17,7 @@ def run_guessing_game
     puts "The computer guessed #{num}."
     return
   elsif guess.to_i == num
-    puts "You guessed the correct number!"
+    return "You guessed the correct number!"
     return
   end
 end
