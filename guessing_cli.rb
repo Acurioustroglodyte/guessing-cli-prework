@@ -10,15 +10,14 @@ def run_guessing_game
   num = rand(1..6)
   guess = gets.chomp
 
-  while guess.to_i != num
-    if guess.to_s == "exit"
-      puts "Goodbye!"
-      return
-    else
-      puts "The computer guessed #{num}."
-      guess = gets.chomp
-    end
+  if guess.to_s == "exit"
+    puts "Goodbye!"
+    return
+  elsif guess.to_i != num
+    puts "The computer guessed #{num}."
+    return
+  elsif guess.to_i == num
+    puts "You guessed the correct number!"
+    return "exit"
   end
-  puts "You guessed the correct number!"
-  return
 end
